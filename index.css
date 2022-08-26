@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:wght@400;500&display=swap');
+
+/* Font Families:
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+/* ################################ Nav Bar ################################ */
+.nav_bar input[type="checkbox"], .menu{
+    display: none;
+}
+
+.nav_bar{
+    position: fixed;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 4rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav_bar ul{
+    display: flex;
+}
+
+.nav_bar a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 250ms ease-in-out;
+}
+
+.nav_bar ul a:hover{
+    /* color:#1ad0ac; */
+    color: rgb(119, 102, 5);
+    transform: scale(1.1);
+}
+
+.nav_bar ul li{
+    list-style: none;
+    margin-left: 1em;
+    font-size: 1.1rem;
+}
+
+.nav_bar h3{
+    font-size: 1.3rem;
+    color: white;
+}
+
+.fa-solid{
+    margin-right: 0.25rem;
+}
+
+
+/* ################################ Section 1 ################################ */
+#section_1{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(Images/image_8.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+}
+
+#btn_1{
+    color: white;
+    margin-top: 0.5em;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 10rem;
+    background-color: #333333;
+    transition: all 250ms ease-in-out;
+    font-weight: bold;
+}
+
+#btn_1:hover{ 
+    background-color: rgb(119,102,5);
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: bolder;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* ################################ Section 2 ################################ */
+
+#section_2{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#section_2 #about{
+    background-color: rgba(0, 0, 0, 0.03);
+    font-size: 1rem;
+    flex-basis: 35rem;
+    height: 15rem;
+    color: white;
+    padding: 2rem;
+    animation: about-animation 1s ease-in-out forwards;
+    transform: translate(-140%);
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.311);
+}
+
+@keyframes about-animation{
+    from{
+        transform: translate(-140%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+
+#section_2 #about h3{
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+#section_2 #about h2{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+#section_2 #about p{ 
+    font-size: 1rem;
+}
+
+#section_2 img{
+    max-width: 100%;
+    width: 20rem;
+    height: 15rem;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    animation: about_img-animation 1s ease-in-out forwards;
+    transform: translate(140%);
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(255, 255, 255, 0.313);
+}
+
+@keyframes about_img-animation{
+    from{
+        transform: translate(140%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+
+/* ################################ Section 3 ################################ */
+#section_3{
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 4rem;
+}
+#section_3 h2{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.places{
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+.places div{
+    width: 18rem;
+    height: 12rem;
+    position: relative;
+}
+
+.places div img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ############### Maldives ################ */
+#maldives::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: all 250ms ease-in-out;
+}
+
+#maldives:hover::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+#more_details_maldives{
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: all 250ms ease-in-out;
+}
+#maldives:hover #more_details_maldives{
+    transform: scaleX(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ############### Kerala ################ */
+#kerala::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.79);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: all 250ms ease-in-out;
+}
+#kerala:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+#more_details_kerala{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: all 250ms ease-in-out;
+}
+#kerala:hover #more_details_kerala{
+    top: 40%;
+    transform: scaleY(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ############### Shimla ################ */
+#shimla::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.79);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: all 250ms ease-in-out;
+}
+#shimla:hover::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+#more_details_shimla{
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    transform: scaleX(0);
+    transform-origin: 0% 0%;
+    transition: all 250ms ease-in-out;
+}
+#shimla:hover #more_details_shimla{
+    left: 0%;
+    transform: scaleX(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ############### Goa ################ */
+#goa::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: all 250ms ease-in-out;
+}
+
+#goa:hover::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+#more_details_goa{
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: all 250ms ease-in-out;
+}
+#goa:hover #more_details_goa{
+    transform: scaleX(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ############### Rishikesh ################ */
+#rishikesh::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.79);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 250ms ease-in-out;
+}
+#rishikesh:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+#more_details_rishikesh{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+    transition: all 250ms ease-in-out;
+    opacity: 0;
+}
+#rishikesh:hover #more_details_rishikesh{
+    top: 40%;
+    transform: scaleY(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ############### Jaipur ################ */
+#jaipur::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.79);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: all 250ms ease-in-out;
+}
+#jaipur:hover::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+#more_details_jaipur{
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    transform: scaleX(0);
+    transform-origin: 0% 0%;
+    transition: all 250ms ease-in-out;
+    opacity: 0;
+}
+#jaipur:hover #more_details_jaipur{
+    left: 0%;
+    transform: scaleX(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ################################ Section 4 ################################ */
+#section_4{
+    background-color: rgba(0, 0, 0, 0.90);
+    padding: 4rem 5rem;
+}
+#section_4 h2{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+#adventures{
+    height: 40rem;
+    padding: 2rem 4.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#adventures img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 250ms ease-in-out;
+}
+
+/* ########## Camping ########## */
+#adventures a:hover #camping img{
+    transform: scale(1.1);
+}
+
+#adventures a:hover #camping div{
+    opacity: 0;
+}
+
+/* ########## Rafting ########## */
+#rafting img{
+    object-position: 70%;
+}
+
+#adventures a:hover #rafting img{
+    transform: scale(1.1);
+}
+
+#adventures a:hover #rafting div{
+    opacity: 0;
+}
+
+/* ########## Paragliding ########## */
+#adventures a:hover #paragliding img{
+    transform: scale(1.1);;
+}
+
+#adventures a:hover #paragliding div{
+    opacity: 0;
+}
+
+/* ########## Trekking ########## */
+#adventures a:hover #trekking img{
+    transform: scale(1.1);;
+}
+
+#adventures a:hover #trekking div{
+    opacity: 0;
+}
+
+/* ########## Hot air ballooning ########## */
+#hot_air_ballooning img{
+    object-position: right;
+}
+
+#adventures a:hover #hot_air_ballooning img{
+    transform: scale(1.1);;
+}
+
+#adventures a:hover #hot_air_ballooning div{
+    opacity: 0;
+}
+
+/* ########## Hot air ballooning ########## */
+#jungle_safari img{
+    object-position: left;
+}
+#adventures a:hover #jungle_safari img{
+    transform: scale(1.1);
+}
+
+#adventures a:hover #jungle_safari div{
+    opacity: 0;
+}
+
+/* ################################ Section 5 ################################ */
+#section_5{
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 4rem 5rem;
+}
+
+#section_5 h2{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#contact{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact img{
+    width: 30rem;
+    height: 20rem;
+}
+
+#form_contact{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 20rem;
+    width: 30rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0.1rem 0.1rem 0.1rem white;
+}
+
+#form_contact label{
+    font-size: 1rem;
+}
+
+#form_contact div input, #message{
+    margin-top: 0.05em;
+    width: 26rem;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 0.1rem solid white;
+    font-size: 1rem;
+    font-family: bold;
+}
+
+#form_contact div input:focus, #message:focus{
+    outline: none;
+}
+
+#message{
+    max-width: 26rem;
+    height: 4rem;
+    max-height: 4rem;
+}
+
+#submit{
+    padding: 0.2rem 2rem; 
+    border: none;
+    border-radius: 2rem;
+}
+
+#submit:hover{
+    background-color: rgb(224,161,110);
+    color: white;
+    animation: submit-animate 0.5s ease-in-out 0s forwards;
+}
+
+@keyframes submit-animate {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 10rem;
+    }
+
+}
+
+/* ################################ Footer ################################ */
+
+#footer{
+    padding: 1rem 5rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.fa-brands{
+    font-size: 3rem;
+    margin: 0.25em 0.375em;
+}
+
+.instagram{
+    color: #C13584;
+    transition: all 250ms ease-in-out;
+}
+.facebook{
+    color: #4267B2;
+    transition: all 250ms ease-in-out;
+}
+.twitter{
+    color: #00acee;
+    transition: all 250ms ease-in-out;
+}
+.youtube{
+    color: #FF0000;
+    transition: all 250ms ease-in-out;
+}
+
+.instagram:hover, .facebook:hover, .twitter:hover, .youtube:hover{
+    transform: scale(1.1);
+}
+
+
+#social{
+    font-size: 1rem;
+    text-align: center;
+}
+
+#social p{
+    margin-top: 1em;
+    font-weight: bold;
+}
