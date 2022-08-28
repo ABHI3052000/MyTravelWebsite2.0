@@ -450,6 +450,40 @@ body{
     opacity: 0;
 }
 
+#camping{
+    position: relative;
+}
+
+#camping::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+
+#camping div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#camping:hover::after{
+    opacity: 0;
+}
+
+/* #camping:hover #camping div{
+    opacity: 0;
+} */
+
+
 /* ########## Rafting ########## */
 #rafting img{
     object-position: 70%;
@@ -463,6 +497,35 @@ body{
     opacity: 0;
 }
 
+#rafting{
+    position: relative;
+}
+
+#rafting::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+
+#rafting div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#rafting:hover::after{
+    opacity: 0;
+}
+
 /* ########## Paragliding ########## */
 #adventures a:hover #paragliding img{
     transform: scale(1.1);;
@@ -472,12 +535,70 @@ body{
     opacity: 0;
 }
 
+#paragliding{
+    position: relative;
+}
+
+#paragliding::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+
+#paragliding div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#paragliding:hover::after{
+    opacity: 0;
+}
+
 /* ########## Trekking ########## */
 #adventures a:hover #trekking img{
     transform: scale(1.1);;
 }
 
 #adventures a:hover #trekking div{
+    opacity: 0;
+}
+
+#trekking{
+    position: relative;
+}
+
+#trekking::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 15rem;
+    height: 15rem;;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+
+#trekking div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#trekking:hover::after{
     opacity: 0;
 }
 
@@ -494,6 +615,35 @@ body{
     opacity: 0;
 }
 
+#hot_air_ballooning{
+    position: relative;
+}
+
+#hot_air_ballooning::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+
+#hot_air_ballooning div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#hot_air_ballooning:hover::after{
+    opacity: 0;
+}
+
 /* ########## Hot air ballooning ########## */
 #jungle_safari img{
     object-position: left;
@@ -506,24 +656,53 @@ body{
     opacity: 0;
 }
 
+#jungle_safari{
+    position: relative;
+}
+
+#jungle_safari::after{
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+
+#jungle_safari div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#jungle_safari:hover::after{
+    opacity: 0;
+}
+
 /* ################################ Section 5 ################################ */
 #section_5{
     background-color: rgba(0, 0, 0, 0.95);
     padding: 4rem 5rem;
 }
 
-#section_5 h2{
+/* #section_5 h2{
     font-size: 2rem;
     text-align: center;
     color: white;
     margin-bottom: 1rem;
-}
+} */
 
 #contact{
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #contact img{
@@ -540,7 +719,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    box-shadow: 0.1rem 0.1rem 0.1rem white;
+    /* box-shadow: 0.1rem 0.1rem 0.1rem white; */
 }
 
 #form_contact label{
@@ -638,3 +817,7 @@ body{
     margin-top: 1em;
     font-weight: bold;
 }
+
+
+
+/* ###################### Responsiveness CSS ##################### */

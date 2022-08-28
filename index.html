@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8dd411cd9b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <title>Chibby Tour and Travels</title>
 </head>
@@ -111,8 +112,8 @@
     <div id="adventures">
         <a href="https://www.adventurenation.com/activity/camping" target="_blank" style="text-decoration: none;">
             <div id="camping">
-                <img class="overlay_1" src="Images/camping.jpg" alt=" Camping">
-                <div style="margin-top: 0.4rem;">
+                <img src="Images/camping.jpg" alt="Camping">
+                <div>
                     <h2 style=" font-size: 1.2rem;">CAMPING</h2>
                 </div>
             </div>
@@ -120,7 +121,7 @@
         <a href="https://www.adventurenation.com/activity/river-rafting" target="_blank"  style="text-decoration: none;">
             <div id="rafting">               
                 <img src="Images/rafting.jpg" alt="Rafting">
-                <div style="margin-top: 0.4rem;">
+                <div>
                     <h2 style=" font-size: 1.2rem;">RAFTING</h2>
                 </div>
             </div>
@@ -128,7 +129,7 @@
         <a href="https://www.adventurenation.com/activity/paragliding" target="_blank"  style="text-decoration: none;">
             <div id="paragliding">
                 <img src="Images/paragliding.jpg" alt="Paragliding">
-                <div style="margin-top: 0.4rem;">
+                <div>
                     <h2 style=" font-size: 1.2rem;">PARAGLIDING</h2>
                 </div>
             </div>
@@ -136,7 +137,7 @@
         <a href="https://www.adventurenation.com/activity/trekking" target="_blank"  style="text-decoration: none;">
             <div id="trekking">    
                 <img src="Images/trekking.jpg" alt="Trekking">
-                <div style="margin-top: 0.4rem;">
+                <div>
                     <h2 style=" font-size: 1.2rem;">TREKKING</h2>
                 </div>
             </div>
@@ -144,7 +145,7 @@
         <a href="https://www.adventurenation.com/activity/hot-air-ballooning" target="_blank"  style="text-decoration: none;">
             <div id="hot_air_ballooning">
                 <img src="Images/hot_air_balloon.png" alt="Hot aiR bALLOONING">
-                <div style="margin-top: 0.4rem;">
+                <div>
                     <h2 style=" font-size: 1.2rem;">HOT AIR BALLOONING</h2>
                 </div>
             </div>
@@ -152,7 +153,7 @@
         <a href="" style="text-decoration: none;">
             <div id="jungle_safari">
                 <img src="Images/jungle_safari.jpg" alt="Jungle Safari">
-                <div style="margin-top: 0.4rem;">
+                <div>
                     <h2 style=" font-size: 1.2rem;">JUNGLE SAFARI</h2>
                 </div>
             </div>
@@ -162,33 +163,41 @@
    </section>
 
    <section id="section_5">
-    <h2>Contact Us</h2>
-    <div id="contact">
-        <img src="Images/contact.jpg" alt="Contact Us">
-        <div>
-            <form id="form_contact">
-                <div>
-                    <label for="name">Name</label><br>
-                    <input id="name" type="text" required> 
-                </div>
-                <div>
-                    <label for="email">Email</label><br>
-                    <input id="email" type="email" required>
-                </div>
-                <div>
-                    <label for="cont_num">Contact Number</label><br>
-                    <input id="cont_num" type="number" required>
-                </div>
-                <div>
-                    <label for="message">Message</label><br>
-                    <textarea id="message"></textarea>
-                </div>
-                <div>
-                    <button type="submit" id="submit">Submit</button>
-                </div>
-            </form>
+    <fieldset style="padding: 2rem; border-radius: 1rem;">
+        <legend align="center" style="padding: 0 0.3rem;"> 
+            <div class="contact_us" style="color: white; font-size: 2rem; text-align: center">
+                Contact Us
+            </div>
+        </legend>
+       
+        <div id="contact">
+            <img src="Images/contact.jpg" style="border-radius: 1rem; border: 0.1rem solid white" alt="Contact Us">
+            <div>
+                <form id="form_contact">
+                    <div>
+                        <label for="name">Name</label><br>
+                        <input id="name" type="text" required> 
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input id="email" type="email" required>
+                    </div>
+                    <div>
+                        <label for="cont_num">Contact Number</label><br>
+                        <input id="cont_num" type="number" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label><br>
+                        <textarea id="message"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
+    </fieldset>
+    
    </section>
 
    <footer id="footer">
@@ -203,5 +212,32 @@
         <p id="copyright">Chibby Tour and Travels <i class="fa-solid fa-copyright"></i> 2022, All Rights Reserved</p>
     </div>
    </footer>
+
+   <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
 </body>
 </html>
